@@ -19,6 +19,20 @@ Amount = 30 x 50 + (50-30) x 40 = 2300*/
 #include <stdio.h>
 
 int main() {
-  
+  //declare variables
+  float distance, amount;
+
+  printf("Enter travelled distance by km : ");
+  scanf("%f",&distance);
+
+  //check whether travelled distance grater than 30km
+  if(distance <= 30){
+    amount=distance*50.0;//calculation
+    printf("Your palyment amount : %.2f",amount);
+  }
+  else{
+    amount = 30*50 + (distance-30)*40;
+    printf("Your palyment amount : %.2f",amount);
+  }
   return 0;
 }
